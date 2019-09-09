@@ -13,6 +13,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { AppRoutingModuleModule } from './app-routing-module.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MovieDetailsModule } from './movie-details/movie-details.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MovieDetailsModule } from './movie-details/movie-details.module';
     FooterComponent,
     TvshowsgallaryComponent,
     MovieDetailsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
