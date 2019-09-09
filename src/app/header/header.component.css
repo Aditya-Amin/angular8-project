@@ -1,0 +1,21 @@
+ul.show-results {
+    position: absolute;
+    top: 100%;
+    z-index: 999;
+    background: white;
+    width: 300px;
+    right: 20px;
+    list-style-type: none;
+    padding: 15px 0 15px 20px;
+    height: 450px;
+    overflow-y: auto;
+}
+
+.poster {
+    width: 45px;
+    height: 45px;
+}
+
+.poster img{ width: 100%; height: 100%;}
+
+ul.show-results li a{ text-decoration: none}

@@ -1,0 +1,14 @@
+<div class="container mb-5">
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-between">
+        <h4>Popular Tv Shows</h4>
+        <a href="">view all</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2" *ngFor="let tv of popular; let i = index">
+        <img *ngIf="i < 6" class="img-fluid" src="https://image.tmdb.org/t/p/w780/{{tv.poster_path}}" alt="{{tv.poster_path}}">
+      </div>
+    </div>
+  </div>
+  

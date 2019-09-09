@@ -1,0 +1,45 @@
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand text-uppercase" href="/">Movies&stuff</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="movies" routerLinkActive="active">Movies <span class="sr-only">(current)</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tv Shows</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Celebs & Photos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+        </ul>
+        <input class="w-50 form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search"
+          (keyup.enter)="fetchMovies()" (keyup)="onNameKeyUp($event)">
+        <div class="show" *ngIf="found">
+          <ul class="show-results">
+            <li *ngFor="let datas of movies" class="d-flex mb-2">
+              <div class="poster mr-3"><img class="img-fluid" src="https://image.tmdb.org/t/p/w185{{ datas.poster_path }}" alt=""></div>
+              <div class="details">
+                  <a (click)="getKey(datas.id)">{{ datas.title }}</a>
+                  <p>Release: {{ datas.release_date }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+</header>

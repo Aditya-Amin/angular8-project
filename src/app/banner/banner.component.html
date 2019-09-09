@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="jumbotron" [style.background]="'url('+base_url+fetured.poster_path+')'">
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-3">
+          <div class="trailer-img mt-4">
+            <img src="https://image.tmdb.org/t/p/w1280{{ fetured.poster_path }}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 text-white">
+          <h1 class="display-6 font-weight-light my-4">{{ fetured.original_title }}
+            <span id="ratings">
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+              <i class="fas fa-star text-success"></i>
+            </span>
+          </h1>
+          <p class="lead mt-5">{{ fetured.overview }}</p>
+          <div class="video-meta mt-5">
+            <span>{{ fetured.runtime }} min |</span>
+            <span *ngFor="let slugs of slug"> {{ slugs.name }}  |</span>
+            <span> {{ fetured.release_date }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
